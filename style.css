@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    height: 45px;
+}
+
+header nav ul{
+    display: flex;
+    margin-left:70%;
+    list-style:none;
+}
+
+header nav ul li{
+    padding-left: 10%;
+}
+
+header a {
+    text-decoration: none;
+    color:white;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container img{
+    height: 100px;
+    border-color: white;
+}
+
+.container h2{
+    margin-top: 2%;
+    font-size: 3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container p, ul{
+    margin-top:2%;
+    font-size: 1.5rem;
+}
+
+footer {
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+nav {
+    justify-content: left;;
+}
+
+#intro{
+    background-repeat: round;
+}
+
+#contact{
+    text-align: center;
+}
+
+#contact a {
+    padding-left: 10px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    /* transform: translateX(-100%); */
+    transition: all 1s;
+}
+@media(perfers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    /* transform: translateX(0); */
+}
+
+
+
+.logos {
+    display: flex;
+    
+}
+
+
+.logo:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4){
+    transition-delay: 600ms;
+}
