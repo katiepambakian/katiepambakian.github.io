@@ -1,73 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Hello World!</title>
-    
-        <link rel="stylesheet" href="style.css">
-        <script defer src="app.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <!-- <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katie Pambakian | Hello World!</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Swiper.js styles -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="./index.html">
+                <h2 class="logo">KatiePambakian</h2>
+            </a>
+            <div class="menu" id="menu">
+                <ul class="list">
+                    <li class="list-item">
+                        <a href="#intro" class="list-link current">Home</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#about" class="list-link">About me</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="./portfolio.html" class="list-link">Portfolio</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="./blog.html" class="list-link">Blog</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#contact" class="list-link">Contact Me</a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="intro" class="hidden">
-                <div class="container">
-                    <h1>Hi, I'm Katie.<br>I'm a computing student at the University of Bristol</h1>
-                    <p>I am currenly in the process of making this page even better, stay tuned...</p>
-                </div>
-            </section>
-            <section id="about" class="hidden">
-                <div class="container">
-                    <h1>About Me</h1>
-                    <p>I'm an undergraduate computer scientist studying at Bristol University. </p>
-                    <p>I wanted to improve me web design skills so made a website about myself and what im up to.</p>
-                    <p>Enjoy!</p>
-                </div>
-            </section>
-            <section id="blog" class="hidden">
-                <div class="container">
-                    <h1>See what I'm up to</h1>
-                    <!--link to blog-->
+            </div>
 
-                </div>
-            </section>
-            <section id="contact" class="hidden">
-                <div class="container">
-                    <h1>Contact me</h1>
-                    <!--In the future add this as a form-->
-                    <div class = "logos">
-                        <div class="logo hidden">
-                            <!--linked in-->
-                            <a href="https://www.linkedin.com/in/katiepambakian"><img src="linkedin.png" alt="linkedIn logo"></a>
-                        </div>
-                        <div class="logo hidden">
-                            <!--instagram-->
-                            <a href="https://www.instagram.com/katiepamba/"><img src="instagram.png" alt="linkedIn logo"></a>
-                        </div>
-                        <div class="logo hidden">
-                            <!--email-->
-                            <a href="mailto:katie.pambakian@icloud.com"><img src="email.png" alt="linkedIn logo"></a>
-                        </div>
+            <div class="list list-right">
+                <button class="btn place-items-center" id="theme-toggle-btn">
+                    <i class="ri-sun-line sun-icon"></i>
+                    <i class="ri-moon-line moon-icon"></i>
+                </button>
+                <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                    <i class="ri-menu-3-line open-menu-icon"></i>
+                    <i class="ri-close-line close-menu-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-header-offset">
+        <section id="intro" class="hidden center">
+            <div class="container block">
+                <h1>Hi, I'm Katie.<br>I'm a computer science student at the University of Bristol</h1>
+                <p>I am currenly in the process of making this page even better, stay tuned...</p>
+            </div>
+        </section>
+        <section id="about" class="hidden center">
+            <div class="container block">
+                <h1>About Me</h1>
+                <p>I found my love for coding when I was in secondary school and have continued to explore where it can take me.</p>
+                <p>I wanted to improve me web design skills so made a website about myself and what im up to.</p>
+                <p>Enjoy!</p>
+                <a href="./assets/portfolio/Katie Pambakian CV.pdf" download="KatiePambakianCV" class="cv"> Download a copy of my CV!</a>
+            </div>
+        </section>
+        <section id="portfolio" class="hidden center">
+            <div class="container block">
+                <h1>View my projects</h1>
+                <p>I have also compiled a list of my faviourate projects, follow the link to find out more!</p>
+                <p>This section is a work in progress</p>
+                <a href="./portfolio.html">Access portfolio</a>
+            </div>
+        </section>
+        <section id="blog" class="hidden center">
+            <div class="container block">
+                <h1>See what I'm up to</h1>
+                <!--link to blog-->
+                <p>Follow the link to my block to see what I'm currently up to</p>
+                <p>This section is a work in progress</p>
+                <a href="./portfolio.html">Access blog</a>
+            </div>
+        </section>
+        <section id="contact" class="hidden center">
+            <div class="container block">
+                <h1>Contact me</h1>
+                <!--In the future add this as a form-->
+                <div class = "logos">
+                    <div class="logo hidden">
+                        <!--linked in-->
+                        <a href="https://www.linkedin.com/in/katiepambakian"><img src="./assets/images/linkedin.png" alt="linkedIn logo"></a>
+                    </div>
+                    <div class="logo hidden">
+                        <!--instagram-->
+                        <a href="https://www.instagram.com/katiepamba/"><img src="./assets/images/instagram.png" alt="Instagram logo"></a>
+                    </div>
+                    <div class="logo hidden">
+                        <!--email-->
+                        <a href="mailto:katie.pambakian@icloud.com"><img src="./assets/images/email.png" alt="Email Icon"></a>
                     </div>
                 </div>
-            </section>
-            
-        </main>
+            </div>
+        </section>
+        
+    </main>
 
-        <footer>
-            <p> Fun fact my faviorate inspirational quote is: memento et mori.</p>
-        </footer>
+    <footer>
+        <p> Fun fact my faviorate inspirational quote is: memento et mori.</p>
+    </footer>
 
-    </body>
+</body>
 
 </html>
