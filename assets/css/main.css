@@ -24,6 +24,7 @@
     --margin-md: 3rem;
     --item-min-height-sm: 20rem;
     --item-min-height-md: 30rem;
+    --link-color: rgba(42, 76, 245, 0.98);
 }
 /* Base styles */
 *{
@@ -84,6 +85,7 @@ body.light-theme{
     --hover-light-color: #fff;
     --transparent-light-color: #252830;
     --transparent-dark-color: rgba(0,0,0,.1);
+    --light-link-color: blue;
 }
 /* Reusable classes */
 
@@ -162,7 +164,7 @@ footer{
 
 main a{
     cursor: pointer;
-    color: blue;
+    color: var(--link-color);
 }
 
 
@@ -270,6 +272,19 @@ main a{
 
 .logo:nth-child(4){
     transition-delay: 600ms;
+}
+
+.timeline:nth-child(2){
+    transition-delay: 200ms;
+}
+.timeline:nth-child(3){
+    transition-delay: 300ms;
+}
+.timeline:nth-child(4){
+    transition-delay: 400ms;
+}
+.timeline:nth-child(5){
+    transition-delay: 500ms;
 }
 
 #intro{
@@ -476,22 +491,84 @@ main a{
     color: var(--light-color-alt);
 }
 
+/* the timeline for the portfolio */
 
-/* Quick read */
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
 
-/* Quick read - Swiper */
+.timeline > .timelinecontainer{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+}
 
-/* Older posts */
+.text-box{
+    padding: 20px 30px;
+    background: var(--transparent-light-color);
+    position: relative;
+    border-radius: 6px;
+    font-size: var(--font-size-sm);
+    color: var(--light-color)
+}
 
-/* Popular tags */
+.left-container{
+    left:0;
+}
+.right-container{
+    left:50%;
+}
 
-/* Newsletter */
+.timelinecontainer img{
+    position: absolute;
+    width:40px;
+    border-radius: 40%;
+    right: -20px;
+    top:32px;
+    z-index:10;
+}
 
-/* Footer */
+.right-container img{
+    left:-20px;
+}
+.timeline:after{
+    content: '';
+    position:absolute;
+    width:6px;
+    height: 100%;
+    background: #fff;
+    top:0;
+    left:50%;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
 
-/* Scrollbar styles */
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
 
-/* Blog post */
-
-/* Media queries */
-
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid var(--transparent-light-color);
+    right: -15px;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--transparent-light-color);
+    left: -15px;
+}
