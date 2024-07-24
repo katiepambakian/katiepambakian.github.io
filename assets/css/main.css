@@ -17,8 +17,8 @@
     --font-size-xsm: 1.4rem;
     --font-size-sm: 1.8rem;
     --font-size-md: 2.6rem;
-    --font-size-lg: 3.2rem;
-    --font-size-xl: 4.2rem;
+    --font-size-lg: 3rem;
+    --font-size-xl: 4rem;
     --gap: 2rem;
     --margin-sm: 2rem;
     --margin-md: 3rem;
@@ -74,10 +74,6 @@ button {
 
 i{
     font-size: var(--font-size-md);
-}
-
-#intro-header{
-    font-size: 150%;
 }
 
 /* Theme color change */
